@@ -89,7 +89,7 @@ function refreshItems() {
     totalClicks = totalClicks + Item.allItems[itemCounter].clickCount;
   }
   for (var imageCounter = 0; imageCounter < allImages.length; imageCounter++) {
-    if (totalClicks === 5) {
+    if (totalClicks === 25) {
         allImages[imageCounter].removeEventListener('click', function(){
           chooseItem(event.target.id);
           console.log('removed click action')
@@ -100,7 +100,7 @@ function refreshItems() {
       console.log('displays new item')
     }
   }
-  if (totalClicks === 5) {
+  if (totalClicks === 25) {
     displayResults();
     console.log('showing results')
   }
